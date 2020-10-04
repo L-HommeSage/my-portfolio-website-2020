@@ -1,32 +1,184 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <Navbar v-if="$route.path!='/'" />
+    <div class="g-cursor">
+      <div
+        :style="cursorCircle"
+        class="g-cursor__circle"
+      ></div>
+      <div
+        class="g-cursor__point"
+        ref="point"
+        :style="cursorPoint"
+      ></div>
+      <div
+        class="g-cursor__point2"
+        ref="point2"
+        :style="cursorPoint2"
+      ></div>
     </div>
-    <router-view/>
+    <router-view />
+
   </div>
 </template>
 
-<style>
+<script>
+import Navbar from "@/components/Navbar.vue";
+export default {
+  name: "App",
+  components: {
+    Navbar
+  },
+  data() {
+    return {
+      xChild: 0,
+      yChild: 0,
+      xParent: 0,
+      yParent: 0,
+      xGrandChild:0,
+      yGrandChild:0,
+      hover: false,
+      hideCursor: true
+    };
+  },
+  computed: {
+    cursorCircle() {
+      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
+    },
+    cursorPoint() {
+      return `transform: translateX(${this.xChild }px) translateY(${this.yChild }px) translateZ(0) translate3d(0, 0, 0);`
+    },
+    cursorPoint2() {
+      return `transform: translateX(${this.xGrandChild }px) translateY(${this.yGrandChild }px) translateZ(0) translate3d(0, 0, 0);`
+    }
+  },
+  methods: {
+    moveCursor(e) {
+      this.xChild = e.clientX;
+      this.yChild = e.clientY;
+      setTimeout(() => {
+        this.xParent = e.clientX - 13;
+        this.yParent = e.clientY - 13;
+      }, 100);
+      setTimeout(() => {
+        this.xGrandChild = e.clientX ;
+        this.yGrandChild = e.clientY ;
+      }, 200);
+    }
+  },
+  mounted() {
+    document.addEventListener("mousemove", this.moveCursor);
+  }
+};
+
+</script> 
+
+<style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  cursor: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: rgb(207, 74, 74);
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Exo 2", sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: whitesmoke;
+  background: linear-gradient(-45deg,black, #0d0d0d, #090909, #121212, #212121, #303030);
+  background-size: 400% 400%;
+  animation: change 25s ease-in-out infinite;
+}
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+body{
+  overflow: overlay;
+}
+body::-webkit-scrollbar {
+  width: 14px;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color:rgba(13, 13, 13, 0.4) ;
+;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #3f3f3fc5;
+  border-radius: 50px;
 }
 
-#nav {
-  padding: 30px;
-}
+.g-cursor {
+  &_hide {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  &__circle {
+    pointer-events: none;
+    user-select: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid whitesmoke;
+    opacity: 0.5;
+    border-radius: 100%;
+    z-index: 5555;
+    backface-visibility: hidden;
+    transition: opacity 0.6s ease;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  &__point {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    pointer-events: none;
+    user-select: none;
+    border-radius: 100%;
+    background: #dddddd;
+    z-index: 55555555;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  &__point2 {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    pointer-events: none;
+    user-select: none;
+    border-radius: 100%;
+    background: #ff3838;
+    z-index: 55555555;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+ 
 }
 </style>
