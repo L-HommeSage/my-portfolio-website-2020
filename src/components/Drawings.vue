@@ -33,7 +33,7 @@
         <li  data-aos="fade-up-right" ><a href="https://www.instagram.com/p/B2E9ZQOheJM/"
         
           ></a></li>
-        <li  data-aos="fade-up" ><a href="https://www.instagram.com/p/CFI--XSjAUt/"
+        <li  data-aos="fade-up" ><a href="https://www.instagram.com/p/B8cBHFoorEv/"
         
           ></a></li>
         <li  data-aos="fade-up-left" ><a href="https://www.instagram.com/p/B2HFqn8Bbx3/"
@@ -90,7 +90,7 @@
     background-image: url("../assets/lio.png");
 }
 .instagram ul li:nth-child(8){
-    background-image: url("../assets/Koi.png");
+    background-image: url("../assets/chica.png");
 }
 .instagram ul li:nth-child(9){
     background-image: url("../assets/samu.png");
