@@ -96,7 +96,7 @@ export default {
         // }
       }
 
-      console.log(this.top)
+      
 
       this.lastScrollTop = window.pageYOffset
 

@@ -13,30 +13,30 @@
 
       <ul class="cf">
 
-        <li  data-aos="fade-up-right" v-on:click="window.location.href('https://www.instagram.com/p/CF1yoGBok7K/');">
-        <a href="https://www.instagram.com/p/CF1yoGBok7K/"></a></li>
-        <li data-aos="fade-up" ><a href="https://www.instagram.com/p/B8Uj6JtI61F/"
+        <li  data-aos="fade-up-right" v-on:click="clicked('a1')">
+        <a id="a1" href="https://www.instagram.com/p/CF1yoGBok7K/"></a></li>
+        <li data-aos="fade-up" v-on:click="clicked('a2')"><a id="a2" href="https://www.instagram.com/p/B8Uj6JtI61F/"
          
           ></a></li>
-        <li  data-aos="fade-up-left" ><a href="https://www.instagram.com/p/B2FARxGhN-B/"
+        <li  data-aos="fade-up-left"  v-on:click="clicked('a5')"><a id="a5" href="https://www.instagram.com/p/B2FARxGhN-B/"
         
           ></a></li>
-        <li  data-aos="fade-up-right" ><a href="https://www.instagram.com/p/B9nDQpnoL9B/"
+        <li  data-aos="fade-up-right" v-on:click="clicked('a3')" ><a id="a3" href="https://www.instagram.com/p/B9nDQpnoL9B/"
            
           ></a></li>
-        <li  data-aos="fade-up" ><a href="https://www.instagram.com/p/B6oY-vuIV1S/"
+        <li  data-aos="fade-up" v-on:click="clicked('a4')"><a id="a4" href="https://www.instagram.com/p/B6oY-vuIV1S/"
             
           ></a></li>
-        <li  data-aos="fade-up-left" ><a href="https://www.instagram.com/p/B9nDLgYIljv/"
+        <li  data-aos="fade-up-left" v-on:click="clicked('a6')"><a id="a6" href="https://www.instagram.com/p/B9nDLgYIljv/"
            
           ></a></li>
-        <li  data-aos="fade-up-right" ><a href="https://www.instagram.com/p/B2E9ZQOheJM/"
+        <li  data-aos="fade-up-right" v-on:click="clicked('a7')" ><a id="a7" href="https://www.instagram.com/p/B2E9ZQOheJM/"
         
           ></a></li>
-        <li  data-aos="fade-up" ><a href="https://www.instagram.com/p/B8cBHFoorEv/"
+        <li  data-aos="fade-up" v-on:click="clicked('a8')"><a id="a8" href="https://www.instagram.com/p/B8cBHFoorEv/"
         
           ></a></li>
-        <li  data-aos="fade-up-left" ><a href="https://www.instagram.com/p/B2HFqn8Bbx3/"
+        <li  data-aos="fade-up-left" v-on:click="clicked('a9')"><a id="a9" href="https://www.instagram.com/p/B2HFqn8Bbx3/"
          
           ></a></li>
       </ul>
@@ -46,7 +46,19 @@
   </div>
 </template>
 
+<script>
+export default {
+    methods:{
+        clicked(id){
+            document.getElementById(id).click();
+        }
+
+    }
+}
+</script>
+
 <style lang="scss" scoped>
+
 .block {
   width: 700px;
   margin-left: auto;
@@ -106,12 +118,7 @@
  }
 
 
-a {
-  text-decoration: none;
-  color: #fff;
-  outline: none;
-  
-}
+
 
 h2 {
   color: #ff3838;
