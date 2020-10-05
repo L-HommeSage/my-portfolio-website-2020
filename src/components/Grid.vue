@@ -102,22 +102,23 @@
     place-items: center;
     text-align: center;
     transition: .6s;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 .container .box:hover{
    /* background: linear-gradient(90deg, #383838 0%, #141414 100%); */
    background: #040504;
     transform: scale(1.12);
     z-index: 1;
+    transition: .6s;
     
 }
 
 .container .box:nth-child(4):hover{
 
    background: url("../assets/city.png");
+   
    background-size: cover;
-    transform: scale(1.12);
-    z-index: 1;
+  
     
 }
 

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Transition :name="'- Antoniadis Pablo -'"/>
     <Particules />
     <h1>PABLO <span style="color:red">ANTONIADIS</span></h1>
 
@@ -34,11 +35,13 @@
 <script>
 import Particules from "@/components/Particules.vue";
 import GlichButton from "@/components/glichButton.vue";
+import Transition from "@/components/Transition.vue";
 export default {
   name: "About",
   components: {
     Particules,
     GlichButton,
+    Transition
   },
 };
 </script>

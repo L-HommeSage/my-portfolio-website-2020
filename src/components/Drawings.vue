@@ -63,7 +63,7 @@ export default {
   width: 700px;
   margin-left: auto;
   margin-bottom: 180px;
-  margin-top: 180px;
+  margin-top: 150px;
   margin-right: auto;
   font-size: 14px;
 }
@@ -158,7 +158,7 @@ h2 {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
   100% {
     transform: scale(1);

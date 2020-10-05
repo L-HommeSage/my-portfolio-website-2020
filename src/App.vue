@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar v-if="$route.path!='/'" />
+    
     <div class="g-cursor">
       <div
         :style="cursorCircle"
@@ -17,26 +17,26 @@
         :style="cursorPoint2"
       ></div>
     </div>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
 
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+
 export default {
   name: "App",
-  components: {
-    Navbar
-  },
+ 
   data() {
     return {
       xChild: 0,
       yChild: 0,
       xParent: 0,
       yParent: 0,
-      xGrandChild:0,
-      yGrandChild:0,
+      xGrandChild: 0,
+      yGrandChild: 0,
       hover: false,
       hideCursor: true
     };
@@ -46,10 +46,10 @@ export default {
       return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
     },
     cursorPoint() {
-      return `transform: translateX(${this.xChild }px) translateY(${this.yChild }px) translateZ(0) translate3d(0, 0, 0);`
+      return `transform: translateX(${this.xChild}px) translateY(${this.yChild}px) translateZ(0) translate3d(0, 0, 0);`
     },
     cursorPoint2() {
-      return `transform: translateX(${this.xGrandChild }px) translateY(${this.yGrandChild }px) translateZ(0) translate3d(0, 0, 0);`
+      return `transform: translateX(${this.xGrandChild}px) translateY(${this.yGrandChild}px) translateZ(0) translate3d(0, 0, 0);`
     }
   },
   methods: {
@@ -61,8 +61,8 @@ export default {
         this.yParent = e.clientY - 13;
       }, 100);
       setTimeout(() => {
-        this.xGrandChild = e.clientX ;
-        this.yGrandChild = e.clientY ;
+        this.xGrandChild = e.clientX;
+        this.yGrandChild = e.clientY;
       }, 200);
     }
   },
@@ -74,6 +74,8 @@ export default {
 </script> 
 
 <style lang="scss">
+@import "https://cdn.jsdelivr.net/npm.animate.css@3.5.1";
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -94,7 +96,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: whitesmoke;
-  background: linear-gradient(-45deg,black, #0d0d0d, #090909, #121212, #212121, #303030);
+  background: linear-gradient(
+    45deg,
+    black,
+    #0d0d0d,
+    #090909,
+    #121212,
+    #212121,
+    #303030
+  );
   background-size: 400% 400%;
   animation: change 25s ease-in-out infinite;
 }
@@ -109,21 +119,21 @@ html {
     background-position: 0 50%;
   }
 }
-body{
-  overflow: overlay;
+body {
+  overflow-y:overlay;
   overflow-x: hidden;
+  
 }
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 14px;
 }
- 
-body::-webkit-scrollbar-track {
-  background-color:rgba(13, 13, 13, 0.4) ;
-;
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
- 
-body::-webkit-scrollbar-thumb {
-  background-color: #3f3f3fc5;
+
+::-webkit-scrollbar-thumb {
+  background-color: #e9e9e980;
   border-radius: 50px;
 }
 
@@ -181,5 +191,14 @@ body::-webkit-scrollbar-thumb {
   }
 
  
-}
+ 
+  }
+
+  .fade-enter, .fade-leave-to{
+transition: translateX(3em);
+    opacity: 0;
+  }
+  .fade-enter-active, .fade-leave-active{
+    transition: all .3s ease;
+  }
 </style>

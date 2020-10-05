@@ -6,15 +6,26 @@
       <div class="menu_bar" />
       <div class="menu_bar" />
     </label>
-    <label class="name">PABLO ANTONIADIS</label>
+    <router-link to="/" class="name">
+    PABLO ANTONIADIS</router-link>
     <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about" >About</router-link></li>
-      <li><a>Projects</a></li>
-      <li><a>Drawings</a></li>
+      
+      <li @click="scrollTo('cv')"><a >About</a></li>
+      <li @click="scrollTo('projects')"><a >Projects</a></li>
+      <li @click="scrollTo('drawings')"><a >Drawings</a></li>
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+     methods: { 
+           scrollTo(id) {
+                this.$emit('scrollTo',id);
+           }
+        }
+}
+</script>
 
 <style scoped>
 .menu_bar {
@@ -41,17 +52,19 @@
 
 #nav {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   z-index: 2;
   background: linear-gradient( rgba(4, 5, 4, 0.7),rgba(4, 5, 4, 0.5),transparent);
 }
-
-label.name {
+.name {
   font-size: 35px;
   line-height: 75px;
   padding: 0 20px;
   font-weight: bold;
+  color: whitesmoke;
+   border-radius: 4px;
+   transition: 0.6s;
 }
 #nav ul {
   float: right;
@@ -61,7 +74,7 @@ label.name {
 #nav ul li {
   display: inline-block;
   line-height: 65px;
-  margin: 5px;
+  
 }
 
 #nav ul li a {
@@ -72,6 +85,7 @@ label.name {
   color: whitesmoke;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.6s;
 }
 
 a.active,

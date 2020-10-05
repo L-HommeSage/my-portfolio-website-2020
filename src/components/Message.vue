@@ -99,14 +99,13 @@ export default {
     display: flex;
     top: 0;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     place-items: center;
     justify-content: center;  
 }
 
 .scroll{
     position: relative;
-    transform: translateX(1%);
     opacity:1;
     margin-right:auto ;
     margin-left: auto;
