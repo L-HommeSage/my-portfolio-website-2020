@@ -15,6 +15,7 @@
       data-aos="fade-up-left"
       data-aos-duration="3000"
     />
+    <FinalPanel/>
     <Footer />
 
   </div>
@@ -28,6 +29,7 @@ import Particules from "@/components/Particules.vue";
 import Gallery from "@/components/Gallery.vue";
 import Projects from "@/components/Projects.vue";
 import Drawings from "@/components/Drawings.vue";
+import FinalPanel from "@/components/FinalPanel.vue";
 import Grid from "@/components/Grid.vue";
 import Footer from "@/components/Footer.vue"
 export default {
@@ -41,6 +43,7 @@ export default {
     Space,
     Projects,
     Drawings,
+    FinalPanel,
     Message
   },
 };

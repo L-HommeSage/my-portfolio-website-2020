@@ -106,7 +106,10 @@ export default {
 
 .scroll{
     position: relative;
-    opacity:1
+    transform: translateX(1%);
+    opacity:1;
+    margin-right:auto ;
+    margin-left: auto;
 }
 
 .line{
@@ -116,7 +119,8 @@ export default {
     letter-spacing: 0.7px;
     text-align: center;
     visibility: visible;
-      justify-content: center; 
+    justify-content: center; 
+     user-select: none;
       
 
 }

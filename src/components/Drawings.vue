@@ -139,7 +139,7 @@ h2 {
   position: relative;
   overflow: hidden;
   opacity: 0.9;
-  top: -100px;
+  top: -110px;
   z-index: 0;
   // animation: increase 30s linear 10ms infinite;
   // transition: all 0.2s ease-in-out;

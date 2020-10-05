@@ -2,7 +2,11 @@
      <header>
          
      <div id="picheader" :style="Fade" /> 
-     
+     <div class="scrolldown" :style="Fade">
+       <span></span>
+        <span></span>
+         <span></span>
+     </div>
      </header>
 </template>
 
@@ -12,13 +16,11 @@ export default {
     return {
       opacity: 1,
       
-     // top: -100,
-      
     };
   },
      computed: {
     Fade() {
-      return `opacity: ${this.opacity}; top:${this.top}px;`
+      return `opacity: ${this.opacity};`
     },
   },
   methods: {
@@ -66,5 +68,15 @@ header #picheader{
     background-size: cover;
     background-position-x: 50%;
   background-position-y: 50%;
+}
+.scrolldown{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: whitesmoke;
+  transform: translateY(-60px) translateX(-50%) rotate(45deg);
+
 }
 </style>

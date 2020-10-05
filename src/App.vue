@@ -111,6 +111,7 @@ html {
 }
 body{
   overflow: overlay;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 14px;
