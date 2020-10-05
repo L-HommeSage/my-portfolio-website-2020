@@ -1,20 +1,18 @@
 <template>
   <div class="about">
-    <Transition :name="'- Welcome -'"/>
-    <Navbar @scrollTo="scrollTo($event)"/>
+    <Transition :name="'- Welcome -'" />
+    <Navbar @scrollTo="scrollTo($event)" />
     <Particules />
     <FadeImage />
     <Message />
     <Space />
-    <Grid
-    id="cv" 
-      data-aos="fade-up-right"
-      data-aos-duration="5000"
-    />
-    <Projects id="projects"/>
-    <Drawings id="drawings"/>
+    <Grid id="cv" />
+    <!-- data-aos="fade-up-right"
+      data-aos-duration="5000" -->
+    <Projects id="projects" />
+    <Drawings id="drawings" />
     <Space />
-  
+
     <Gallery
       data-aos="fade-up-left"
       data-aos-duration="3000"

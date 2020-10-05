@@ -73,8 +73,8 @@ header #picheader{
   position: fixed;
   bottom: 20px;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
  
   transform: translateY(-40px) translateX(-50%) rotate(45deg);
 
@@ -87,8 +87,8 @@ header #picheader{
   display: block;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #ffffff;
-   border-right: 2px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+   border-right: 4px solid #ffffff;
    animation: animate 1.5s linear infinite;
    opacity: 0;
 
@@ -97,8 +97,8 @@ header #picheader{
 transform: translate(-8px,-8px);
 animation-delay: -0.4s;
 }.scrolldown span:nth-child(2){
-  border-bottom: 2px solid yellow;
-   border-right: 2px solid yellow;
+  /* border-bottom: 2px solid yellow;
+   border-right: 2px solid yellow; */
    transform: translate(0px,0px);
    animation-delay: -0.2s;
 }

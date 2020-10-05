@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Transition :name="'- Antoniadis Pablo -'"/>
+    <Transition :name="'- Pablo Antoniadis -'"/>
     <Particules />
     <h1>PABLO <span style="color:red">ANTONIADIS</span></h1>
 
