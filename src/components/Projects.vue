@@ -1,49 +1,48 @@
 <template>
-<div>
-  <div class="projects">
-    <div style="height:200px" />
-    <div
-      class="imgbox imageScroll "
-      :style="GoUp"
-    />
+  <div>
+    <div class="projects">
+      <div style="height:200px" />
+      <div
+        class="imgbox imageScroll "
+        :style="GoUp"
+      />
 
-    <div class="text">
-      <h1>PROJECTS :</h1>
-      <p>Kanpai<br>2019 - <br>My 4 friends and I for our graduation project. We decided to develop a mobile application on sake. In Europe, interest in sake is growing strongly. Like Vivino we want to provide sake enthusiasts with all the information about any sake in their hand. For this project I take care of the UI and UX part as well as part of the backend. The project is developed in Flutter and Firebase.</p>
-      <p>Machine learning project<br>2020<br>After having scraped all the results of the football league 1 on <a
-          class="maxifoot"
-          href="http://www.maxifoot.fr/calendrier-ligue-1-france.htm"
-          data-content="maxifoot.fr"
-        >maxifoot.fr</a>. I applied my machine learning knowledge learned in class to predict the matches of the 2019-2020 season. I used classification algorithms to predict if a match ended in victory, defeat or draw. I tried Logistic regression, Support Vector Machines and Random Forest which got 47% accuracy. I won't be rich with this tomorrow unfortunately. You can take a look at my project here: <a
-          class="Colab"
-          href="https://colab.research.google.com/drive/1YvNBcGHgS3TlJS2xwLu-JBRdB9X9usj6?usp=sharing"
-          data-content="Colab"
-        >Colab</a>.</p>
-      <p>Flappy Bird AI<br>2019<br>Rebuilt the game Flappy Bird and implemented an IA using first Pytorch and then NEAT. Coded in Python with pygame package. I learned the basics of neural networks while working on this project.</p>
-      <p style="width:70%">Conway's game of life<br>2018<br>
-        Reproduction of the famous <a
-          class="Conway"
-          href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
-          data-content="Conway's game of life"
-        >Conway's game of life</a> from scratch. I did this project in C++. Thanks to this project I was able to master the concepts of object-oriented programming.</p>
+      <div class="text">
+        <h1>PROJECTS :</h1>
+        <p>Kanpai<br>2019 - <br>My 4 friends and I for our graduation project. We decided to develop a mobile application on sake. In Europe, interest in sake is growing strongly. Like Vivino we want to provide sake enthusiasts with all the information about any sake in their hand. For this project I take care of the UI and UX part as well as part of the backend. The project is developed in Flutter and Firebase.</p>
+        <p>Machine learning project<br>2020<br>After having scraped all the results of the football league 1 on <a
+            class="maxifoot"
+            href="http://www.maxifoot.fr/calendrier-ligue-1-france.htm"
+            data-content="maxifoot.fr"
+          >maxifoot.fr</a>. I applied my machine learning knowledge learned in class to predict the matches of the 2019-2020 season. I used classification algorithms to predict if a match ended in victory, defeat or draw. I tried Logistic regression, Support Vector Machines and Random Forest which got 47% accuracy. I won't be rich with this tomorrow unfortunately. You can take a look at my project here: <a
+            class="Colab"
+            href="https://colab.research.google.com/drive/1YvNBcGHgS3TlJS2xwLu-JBRdB9X9usj6?usp=sharing"
+            data-content="Colab"
+          >Colab</a>.</p>
+        <p>Flappy Bird AI<br>2019<br>Rebuilt the game Flappy Bird and implemented an IA using first Pytorch and then NEAT. Coded in Python with pygame package. I learned the basics of neural networks while working on this project.</p>
+        <p style="width:70%">Conway's game of life<br>2018<br>
+          Reproduction of the famous <a
+            class="Conway"
+            href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+            data-content="Conway's game of life"
+          >Conway's game of life</a> from scratch. I did this project in C++. Thanks to this project I was able to master the concepts of object-oriented programming.</p>
+
+      </div>
+      <div
+        class="imgbox imageKanpai1 "
+        :style="GoUp2"
+      />
+      <div
+        class="imgbox imageKanpai2 "
+        :style="GoUp3"
+      />
+      <div
+        class="imgbox imageKanpai3 "
+        :style="GoUp4"
+      />
 
     </div>
-    <div
-      class="imgbox imageKanpai1 "
-      :style="GoUp2"
-    />
-    <div
-      class="imgbox imageKanpai2 "
-      :style="GoUp3"
-    />
-    <div
-      class="imgbox imageKanpai3 "
-      :style="GoUp4"
-    />
-    
-  </div>
-  
-  
+
   </div>
 </template>
 
@@ -54,7 +53,7 @@ export default {
       top: 220,
       top2: 200,
       top3: 190,
-      top4:215,
+      top4: 215,
       lastScrollTop: 0,
       windowWidth: window.width,
     };
@@ -73,7 +72,7 @@ export default {
       return `transform: matrix(1, 0, 0, 1, 0, ${this.top4});`
     },
   },
-  
+
   methods: {
     scrollfade() {
 
@@ -98,7 +97,7 @@ export default {
         // }
       }
 
-      
+
 
       this.lastScrollTop = window.pageYOffset
 
@@ -109,9 +108,9 @@ export default {
   },
   mounted() {
     document.addEventListener("scroll", this.scrollfade);
-    if (this.windowWidth.value < 550){
-this.top3 = 700
-}
+    if (this.windowWidth < 550) {
+      this.top3 = 700
+    }
   }
 }
 </script>
@@ -166,10 +165,10 @@ p {
     cubic-bezier(0, 0.995, 0.995, 1);
   -webkit-font-smoothing: antialiased;
 }
-.imageKanpai1{
-     position: absolute;
-  right:  100px;
-   z-index: 1;
+.imageKanpai1 {
+  position: absolute;
+  right: 100px;
+  z-index: 1;
   border-radius: 8px;
   width: 200px;
   height: 400px;
@@ -182,9 +181,9 @@ p {
     cubic-bezier(0, 0.995, 0.995, 1);
   -webkit-font-smoothing: antialiased;
 }
-.imageKanpai2{
-     position: absolute;
-  right:  320px;
+.imageKanpai2 {
+  position: absolute;
+  right: 320px;
   z-index: 1;
   border-radius: 8px;
   width: 200px;
@@ -198,9 +197,9 @@ p {
     cubic-bezier(0, 0.995, 0.995, 1);
   -webkit-font-smoothing: antialiased;
 }
-.imageKanpai3{
-     position: absolute;
-  right:  540px;
+.imageKanpai3 {
+  position: absolute;
+  right: 540px;
   z-index: 2;
   border-radius: 8px;
   width: 200px;
@@ -214,8 +213,6 @@ p {
     cubic-bezier(0, 0.995, 0.995, 1);
   -webkit-font-smoothing: antialiased;
 }
-
-
 
 a {
   text-decoration: none;
@@ -348,63 +345,59 @@ a {
   }
 }
 @media (max-width: 545px) {
- .text {
-  position: relative;
-  background: #fff;
-  color: #111;
-  padding: 60px 180px 160px 60px;
-  width: 475px;
-  box-sizing: border-box;
-  margin-left: -20px;
-  letter-spacing: 0.1em;
-}
-.imageScroll {
-  position: absolute;
-  right: 0px;
-  width: 130px;
-  height: 500px;
-  z-index: 2;
-  background-image: url("../assets/chats.png");
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-size: cover;
-  transition-duration: 1s, 1s;
-  transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
-    cubic-bezier(0, 0.995, 0.995, 1);
-  -webkit-font-smoothing: antialiased;
-}
-.imageKanpai1{
-  display: none;
-}
-.imageKanpai2{
-  position: absolute;
-  right:  20px;
-  z-index: 1;
-  border-radius: 8px;
-  width: 180px;
-  height: 380px;
-  background-image: url("../assets/kanpai2.jpg");
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-size: cover;
-  transition-duration: 1s, 1s;
-  transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
-    cubic-bezier(0, 0.995, 0.995, 1);
-  -webkit-font-smoothing: antialiased;
-  
-}
-.imageKanpai3{
-display: none;
-}
-h1 {
- 
-  font-size: 30px;
-  
-}
+  .text {
+    position: relative;
+    background: #fff;
+    color: #111;
+    padding: 60px 180px 160px 60px;
+    width: 475px;
+    box-sizing: border-box;
+    margin-left: -20px;
+    letter-spacing: 0.1em;
+  }
+  .imageScroll {
+    position: absolute;
+    right: 0px;
+    width: 130px;
+    height: 500px;
+    z-index: 2;
+    background-image: url("../assets/chats.png");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    transition-duration: 1s, 1s;
+    transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
+      cubic-bezier(0, 0.995, 0.995, 1);
+    -webkit-font-smoothing: antialiased;
+  }
+  .imageKanpai1 {
+    display: none;
+  }
+  .imageKanpai2 {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    border-radius: 8px;
+    width: 180px;
+    height: 380px;
+    background-image: url("../assets/kanpai2.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    transition-duration: 1s, 1s;
+    transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
+      cubic-bezier(0, 0.995, 0.995, 1);
+    -webkit-font-smoothing: antialiased;
+  }
+  .imageKanpai3 {
+    display: none;
+  }
+  h1 {
+    font-size: 30px;
+  }
 
-.projects{
-  overflow-x: hidden;
+  .projects {
+    overflow-x: hidden;
+  }
 }
-}
-
 </style>

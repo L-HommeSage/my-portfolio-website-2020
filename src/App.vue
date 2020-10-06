@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <div class="g-cursor">
+    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
       <div
         :style="cursorCircle"
         class="g-cursor__circle"
@@ -64,10 +64,20 @@ export default {
         this.xGrandChild = e.clientX;
         this.yGrandChild = e.clientY;
       }, 200);
-    }
+    
+    },
+hide(){
+  this.hideCursor = true;
+},
+show(){
+  this.hideCursor = false;
+}
+
   },
   mounted() {
     document.addEventListener("mousemove", this.moveCursor);
+     document.addEventListener('mouseleave', this.hide );
+     document.addEventListener('mouseenter', this.show);
   }
 };
 
@@ -140,10 +150,12 @@ body {
 .g-cursor {
   &_hide {
     opacity: 0;
+    display: none;
     width: 60px;
     height: 60px;
     transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
   }
+ 
 
   &__circle {
     pointer-events: none;
@@ -153,8 +165,9 @@ body {
     position: fixed;
     width: 30px;
     height: 30px;
-    border: 1px solid whitesmoke;
-    opacity: 0.5;
+    //border: 1px solid whitesmoke;
+    backdrop-filter: invert(1);
+    opacity: 1;
     border-radius: 100%;
     z-index: 5555;
     backface-visibility: hidden;
@@ -189,6 +202,14 @@ body {
     backface-visibility: hidden;
     will-change: transform;
   }
+   &_hover {
+      .g-cursor__circle {
+        opacity: 1;
+        transition: width .6s ease,
+          height .6s ease,
+          opacity .6s ease;
+      }
+    }
 
  
  

@@ -78,11 +78,11 @@
 
 <script>
 export default {
-     methods: { 
-           scrollToTop() {
-                window.scrollTo(0,0);
-           }
-        }
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  }
 }
 </script>
 
@@ -117,7 +117,6 @@ a {
   text-decoration: none;
   color: #656565;
   z-index: 1;
- 
 
   &:before,
   &:after {
@@ -156,7 +155,6 @@ a {
 }
 .toTopIcon {
   margin-bottom: 10px;
-  
 }
 @keyframes glitchy {
   0% {
@@ -176,13 +174,13 @@ a {
   }
 }
 
-@media (max-width: 600px){
-  .links{
-   flex-direction: column;
-  justify-content: space-evenly;
-   margin: 4px;
+@media (max-width: 600px) {
+  .links {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 4px;
   }
-  footer{
+  footer {
     height: 200px;
   }
 }

@@ -1,5 +1,12 @@
 <template>
+<!-- <div > -->
+  <!-- <div id="container">
+<div class="box"/>
+<div class="box"/>
 
+
+
+  </div> -->
   <Particles
     id="tsparticles"
     :options="{
@@ -32,7 +39,7 @@
                     enable: true,
                     outMode: 'out',
                     random: false,
-                    speed: 2,
+                    speed: 2.5,
                     straight: false
                 },
                 number: {
@@ -43,7 +50,7 @@
                     value: 15
                 },
                 opacity: {
-                    value: 0.5
+                    value: 0.6
                 },
                 shape: {
                     type: 'circle'
@@ -56,9 +63,42 @@
             detectRetina: true
         }"
   />
+  <!-- </div> -->
 </template>
+<script>
+export default {
+  // mounted(){
+
+  //   setInterval(function(){
+  //   var gooey = document.getElementsByClassName('box');
+  //   for(var i = 0; i< gooey.length;i++){
+  //     gooey[i].style.left = Math.floor(Math.random()*100)+'vw';
+  //     gooey[i].style.top = Math.floor(Math.random()*100)+'vh';
+  //   }},1000)
+  // }
+}
+</script>
 
 <style scoped>
+
+/* #container{
+    z-index: 6;
+  pointer-events: none;
+    
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  filter: contrast(50); 
+}
+#container .box{
+  position: absolute;
+  height: 550px;
+  width: 550px;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 50%;
+  filter: blur(100px);
+  transition: 2s;
+} */
 #tsparticles {
   z-index: 5;
   pointer-events: none;
@@ -136,7 +176,8 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-
+  background-size: 100% 100%;
+  animation: none;
 }
 #tsparticles::after {
   content: "";
@@ -145,7 +186,10 @@
   height: 200vh;
   left: -50%;
   top: -50%;
-
+  background-image: none;
+  animation: none;
+  opacity: none;
+  visibility: visible;
 }
 }
 </style>
