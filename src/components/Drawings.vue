@@ -13,31 +13,70 @@
 
       <ul class="cf">
 
-        <li  data-aos="fade-up-right" v-on:click="clicked('a1')">
-        <a id="a1" href="https://www.instagram.com/p/CF1yoGBok7K/"></a></li>
-        <li data-aos="fade-up" v-on:click="clicked('a2')"><a id="a2" href="https://www.instagram.com/p/B8Uj6JtI61F/"
-         
+        <li
+          data-aos="fade-up-right"
+          v-on:click="clicked('a1')"
+        >
+          <a
+            id="a1"
+            href="https://www.instagram.com/p/CF1yoGBok7K/"
+          ></a>
+        </li>
+        <li
+          data-aos="fade-up"
+          v-on:click="clicked('a2')"
+        ><a
+            id="a2"
+            href="https://www.instagram.com/p/B8Uj6JtI61F/"
           ></a></li>
-        <li  data-aos="fade-up-left"  v-on:click="clicked('a5')"><a id="a5" href="https://www.instagram.com/p/B2FARxGhN-B/"
-        
+        <li
+          data-aos="fade-up-left"
+          v-on:click="clicked('a5')"
+        ><a
+            id="a5"
+            href="https://www.instagram.com/p/B2FARxGhN-B/"
           ></a></li>
-        <li  data-aos="fade-up-right" v-on:click="clicked('a3')" ><a id="a3" href="https://www.instagram.com/p/B9nDQpnoL9B/"
-           
+        <li
+          data-aos="fade-up-right"
+          v-on:click="clicked('a3')"
+        ><a
+            id="a3"
+            href="https://www.instagram.com/p/B9nDQpnoL9B/"
           ></a></li>
-        <li  data-aos="fade-up" v-on:click="clicked('a4')"><a id="a4" href="https://www.instagram.com/p/B6oY-vuIV1S/"
-            
+        <li
+          data-aos="fade-up"
+          v-on:click="clicked('a4')"
+        ><a
+            id="a4"
+            href="https://www.instagram.com/p/B6oY-vuIV1S/"
           ></a></li>
-        <li  data-aos="fade-up-left" v-on:click="clicked('a6')"><a id="a6" href="https://www.instagram.com/p/B9nDLgYIljv/"
-           
+        <li
+          data-aos="fade-up-left"
+          v-on:click="clicked('a6')"
+        ><a
+            id="a6"
+            href="https://www.instagram.com/p/B9nDLgYIljv/"
           ></a></li>
-        <li  data-aos="fade-up-right" v-on:click="clicked('a7')" ><a id="a7" href="https://www.instagram.com/p/B2E9ZQOheJM/"
-        
+        <li
+          data-aos="fade-up-right"
+          v-on:click="clicked('a7')"
+        ><a
+            id="a7"
+            href="https://www.instagram.com/p/B2E9ZQOheJM/"
           ></a></li>
-        <li  data-aos="fade-up" v-on:click="clicked('a8')"><a id="a8" href="https://www.instagram.com/p/B8cBHFoorEv/"
-        
+        <li
+          data-aos="fade-up"
+          v-on:click="clicked('a8')"
+        ><a
+            id="a8"
+            href="https://www.instagram.com/p/B8cBHFoorEv/"
           ></a></li>
-        <li  data-aos="fade-up-left" v-on:click="clicked('a9')"><a id="a9" href="https://www.instagram.com/p/B2HFqn8Bbx3/"
-         
+        <li
+          data-aos="fade-up-left"
+          v-on:click="clicked('a9')"
+        ><a
+            id="a9"
+            href="https://www.instagram.com/p/B2HFqn8Bbx3/"
           ></a></li>
       </ul>
 
@@ -48,17 +87,16 @@
 
 <script>
 export default {
-    methods:{
-        clicked(id){
-            document.getElementById(id).click();
-        }
-
+  methods: {
+    clicked(id) {
+      document.getElementById(id).click();
     }
+
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
 .block {
   width: 700px;
   margin-left: auto;
@@ -75,37 +113,36 @@ export default {
   list-style: none;
   position: relative;
   background-image: url("../assets/bg.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.instagram ul li:nth-child(1){
-    background-image: url("../assets/geisha.png");
+.instagram ul li:nth-child(1) {
+  background-image: url("../assets/geisha.png");
 }
-.instagram ul li:nth-child(2){
-    background-image: url("../assets/tigre.png");
+.instagram ul li:nth-child(2) {
+  background-image: url("../assets/tigre.png");
 }
-.instagram ul li:nth-child(3){
-    background-image: url("../assets/mask.png");
+.instagram ul li:nth-child(3) {
+  background-image: url("../assets/mask.png");
 }
-.instagram ul li:nth-child(4){
-    background-image: url("../assets/suzette.png");
+.instagram ul li:nth-child(4) {
+  background-image: url("../assets/suzette.png");
 }
-.instagram ul li:nth-child(5){
-    background-image: url("../assets/look.png");
+.instagram ul li:nth-child(5) {
+  background-image: url("../assets/look.png");
 }
-.instagram ul li:nth-child(6){
-    background-image: url("../assets/enio.png");
+.instagram ul li:nth-child(6) {
+  background-image: url("../assets/enio.png");
 }
-.instagram ul li:nth-child(7){
-    background-image: url("../assets/lio.png");
+.instagram ul li:nth-child(7) {
+  background-image: url("../assets/lio.png");
 }
-.instagram ul li:nth-child(8){
-    background-image: url("../assets/chica.png");
+.instagram ul li:nth-child(8) {
+  background-image: url("../assets/chica.png");
 }
-.instagram ul li:nth-child(9){
-    background-image: url("../assets/samu.png");
+.instagram ul li:nth-child(9) {
+  background-image: url("../assets/samu.png");
 }
 
 .instagram ul li:hover {
@@ -113,12 +150,9 @@ export default {
   z-index: 1;
 }
 
- .instagram ul:hover li:not(:hover) {
-     opacity: 0.5;  
- }
-
-
-
+.instagram ul:hover li:not(:hover) {
+  opacity: 0.5;
+}
 
 h2 {
   color: #ff3838;
@@ -179,5 +213,31 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 545px) {
+  .block {
+    width: 100vw;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-right: auto;
+    font-size: 14px;
+  }
+  .instagram ul li {
+    width: 32%;
+    margin: 1px;
+    padding-bottom: 28%;
+    left: 1.5%;
+    list-style: none;
+    position: relative;
+    background-image: url("../assets/bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .draw_center {
+    overflow-x: hidden;
+  }
 }
 </style>

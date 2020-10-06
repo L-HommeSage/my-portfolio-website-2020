@@ -24,7 +24,7 @@
       >.
       <br />
       <br />
-      Do you need help on a project, campaign or do you just want to say hello ?
+      Do you need help on a project or do you just want to say hello ?
       <a class="email" href="mailto:antoniadis.pablo@gmail.com" data-content="Contact me">Contact me</a>.
     </p>
 

@@ -74,7 +74,7 @@ export default {
 </script> 
 
 <style lang="scss">
-@import "https://cdn.jsdelivr.net/npm.animate.css@3.5.1";
+
 
 * {
   box-sizing: border-box;
@@ -201,4 +201,16 @@ transition: translateX(3em);
   .fade-enter-active, .fade-leave-active{
     transition: all .3s ease;
   }
+
+  @media (max-width: 545px) {
+  #app {
+  font-family: "Exo 2", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: whitesmoke;
+  background: 
+    #0d0d0d;
+
+}
+}
 </style>

@@ -262,4 +262,10 @@ animation-delay: 0.9s;
 }
     
 }
+
+@media (max-width: 545px) {
+  h1 {
+  font-size: 25px ;
+}
+}
 </style>

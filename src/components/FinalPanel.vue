@@ -35,8 +35,10 @@ export default {
 }
 .double_door {
   margin-bottom: 200px;
+   
 }
 .double_door > div {
+ 
   float: left;
   width: 50%;
   height: 440px;
@@ -141,4 +143,5 @@ export default {
   background: #fff;
   opacity: 0.1;
 }
+
 </style>

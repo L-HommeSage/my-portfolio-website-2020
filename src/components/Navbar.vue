@@ -95,7 +95,7 @@ a:hover {
 }
 
 @media (max-width: 952px) {
-  label.name {
+  .name {
     font-size: 30px;
     padding-left: 15px;
   }
@@ -106,7 +106,7 @@ a:hover {
 
 @media (max-width: 730px) {
   
-label.name {
+.name {
     font-size: 20px;
     padding-left: 15px;
   }
@@ -142,6 +142,12 @@ label.name {
   #check:checked ~ ul {
     left: 0;
       background: #212529;
+  }
+}
+@media (max-width: 380px) {
+  .name {
+    font-size: 16px;
+    padding-left: 15px;
   }
 }
 </style>

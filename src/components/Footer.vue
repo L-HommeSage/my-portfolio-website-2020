@@ -179,6 +179,11 @@ a {
 @media (max-width: 600px){
   .links{
    flex-direction: column;
+  justify-content: space-evenly;
+   margin: 4px;
+  }
+  footer{
+    height: 200px;
   }
 }
 </style>

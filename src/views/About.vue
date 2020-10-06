@@ -16,8 +16,9 @@
     <Gallery
       data-aos="fade-up-left"
       data-aos-duration="3000"
+      class="gallery"
     />
-    <FinalPanel />
+    <FinalPanel class="gallery"/>
     <Footer />
 
   </div>
@@ -64,5 +65,11 @@ export default {
 <style lang="css" scoped>
 .about {
   overflow: hidden;
+}
+
+@media (max-width: 545px) {
+.gallery{
+  display: none;
+}
 }
 </style>

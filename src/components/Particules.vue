@@ -128,4 +128,24 @@
     background-position: 0 50%;
   }
 }
+
+@media (max-width: 545px) {
+#tsparticles {
+  z-index: 5;
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+
+}
+#tsparticles::after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  left: -50%;
+  top: -50%;
+
+}
+}
 </style>

@@ -56,6 +56,7 @@ export default {
       top3: 190,
       top4:215,
       lastScrollTop: 0,
+      windowWidth: window.width,
     };
   },
   computed: {
@@ -72,6 +73,7 @@ export default {
       return `transform: matrix(1, 0, 0, 1, 0, ${this.top4});`
     },
   },
+  
   methods: {
     scrollfade() {
 
@@ -107,6 +109,9 @@ export default {
   },
   mounted() {
     document.addEventListener("scroll", this.scrollfade);
+    if (this.windowWidth.value < 550){
+this.top3 = 700
+}
   }
 }
 </script>
@@ -342,4 +347,64 @@ a {
     }
   }
 }
+@media (max-width: 545px) {
+ .text {
+  position: relative;
+  background: #fff;
+  color: #111;
+  padding: 60px 180px 160px 60px;
+  width: 475px;
+  box-sizing: border-box;
+  margin-left: -20px;
+  letter-spacing: 0.1em;
+}
+.imageScroll {
+  position: absolute;
+  right: 0px;
+  width: 130px;
+  height: 500px;
+  z-index: 2;
+  background-image: url("../assets/chats.png");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  transition-duration: 1s, 1s;
+  transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
+    cubic-bezier(0, 0.995, 0.995, 1);
+  -webkit-font-smoothing: antialiased;
+}
+.imageKanpai1{
+  display: none;
+}
+.imageKanpai2{
+  position: absolute;
+  right:  20px;
+  z-index: 1;
+  border-radius: 8px;
+  width: 180px;
+  height: 380px;
+  background-image: url("../assets/kanpai2.jpg");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  transition-duration: 1s, 1s;
+  transition-timing-function: cubic-bezier(0, 0.995, 0.995, 1),
+    cubic-bezier(0, 0.995, 0.995, 1);
+  -webkit-font-smoothing: antialiased;
+  
+}
+.imageKanpai3{
+display: none;
+}
+h1 {
+ 
+  font-size: 30px;
+  
+}
+
+.projects{
+  overflow-x: hidden;
+}
+}
+
 </style>

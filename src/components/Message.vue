@@ -148,7 +148,29 @@ span{
 .jap{
     color:#3f3f3f ;
 }
+@media (max-width: 545px) {
+  span{
+     font-family: "Playfair Display", serif;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    place-items: center;
+    vertical-align: middle;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+.num{
+    font-size: 24px;
+    line-height: 34px;
+}
+.bar{
+    transform: scale(0.5) translateX(-10px) translateY(-7px);
+     line-height: 50px;
 
+}
+}
 
 
 </style>
