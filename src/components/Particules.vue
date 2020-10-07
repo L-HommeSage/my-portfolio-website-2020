@@ -39,7 +39,7 @@
                     enable: true,
                     outMode: 'out',
                     random: false,
-                    speed: 2.5,
+                    speed: 2,
                     straight: false
                 },
                 number: {

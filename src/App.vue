@@ -150,7 +150,8 @@ body {
 .g-cursor {
   &_hide {
     opacity: 0;
-    display: none;
+    position: fixed;
+    transition: opacity 0.6s ease;
     width: 60px;
     height: 60px;
     transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;

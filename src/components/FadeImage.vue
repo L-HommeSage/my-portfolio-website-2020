@@ -64,6 +64,7 @@ header #picheader{
     left: 0;
     height: 100%;
     width: 100vw;
+    filter: brightness(1.15);
     background: url('../assets/Kyotorouge.jpg');
     background-size: cover;
     background-position-x: 50%;

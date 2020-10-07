@@ -43,10 +43,10 @@
 .glichybtn:hover::after {
   content: "";
   position: absolute;
-  background: linear-gradient(45deg, #00adad, #ff000f);
+  background: linear-gradient(45deg, #217EFA, #01F7C1);
   width: 100%;
   height: 100%;
-  transform: scale(1.02);
+  transform: scale(1.01);
   z-index: -1;
   background-size: 300%;
   animation: animation 2s linear infinite;
@@ -65,6 +65,7 @@
 
 .link-inner {
   display: flex;
+  transform: translateY(0.5px);
   flex-direction: row;
   align-items: center;
   justify-content: center;
