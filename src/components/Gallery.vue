@@ -4,34 +4,31 @@
     <div class="container">
       <div class="clip clip1">
         <div class="content">
-          <h2>
-            Post Title 1
-          </h2>
+          <h3>
+            Paris
+          </h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Temporibus, tenetur!
+            Rare scene of Parisian life. Montmartre totally empty of its tourists and inhabitants. Confinement obliges.
           </p>
         </div>
       </div>
       <div class="clip clip2">
         <div class="content">
-          <h2>
-            Post Title 2
-          </h2>
+          <h3>
+            Kyoto
+          </h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Temporibus, tenetur!
+            I like to take pictures of paths, I don't know why. Maybe because I like to follow them all.
           </p>
         </div>
       </div>
       <div class="clip clip3">
         <div class="content">
-          <h2>
-            Post Title 3
-          </h2>
+          <h3>
+            Seoul
+          </h3>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Temporibus, tenetur!
+            City where one passes without transition from skyscrapers and modern neon lights to Buddhist temples, palaces and pagodas.
           </p>
         </div>
       </div>
@@ -52,7 +49,8 @@
   width: 800px;
   height: 400px;
   border-radius: 8px;
-  background: url("https://picsum.photos/800/500?random=1");
+  background: url("../assets/paris.jpg");
+  background-position-y: 30%;
   background-size: cover;
   box-shadow: 0px 0px 61px -20px rgba(255, 255, 255, 0.7);
 }
@@ -91,21 +89,24 @@
 }
 
 .container .clip.clip1 {
-  background: url("https://picsum.photos/800/500?random=1");
+  background: url("../assets/paris.jpg");
+  background-position-y: 30%;
   background-size: cover;
   border-radius: 8px;
   clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
 }
 
 .container .clip.clip2 {
-  background: url("https://picsum.photos/800/500?random=2");
+  background: url("../assets/camino.jpg");
+  background-position-y: 10%;
   background-size: cover;
   border-radius: 8px;
   clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
 }
 
 .container .clip.clip3 {
-  background: url("https://picsum.photos/800/500?random=3");
+  background: url("../assets/seoul.jpg");
+  background-position-y: 30%;
   background-size: cover;
   border-radius: 8px;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
@@ -127,7 +128,7 @@
   bottom: -50px;
   left: 0;
   width: 70%;
-  padding: 20px;
+  padding: 10px;
   background: rgba(4, 5, 4, 0.8);
   opacity: 0;
   border-radius: 0 8px 0 8px;
@@ -137,5 +138,9 @@
 .container .clip:hover .content {
   bottom: 0;
   opacity: 1;
+}
+.container .clip:hover .content:hover {
+  bottom: 0;
+  opacity: 0;
 }
 </style>

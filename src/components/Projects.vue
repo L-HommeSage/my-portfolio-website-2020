@@ -14,7 +14,7 @@
             class="maxifoot"
             href="http://www.maxifoot.fr/calendrier-ligue-1-france.htm"
             data-content="maxifoot.fr"
-          >maxifoot.fr</a>. I applied my machine learning knowledge learned in class to predict the matches of the 2019-2020 season. I used classification algorithms to predict if a match ended in victory, defeat or draw. I tried Logistic regression, Support Vector Machines and Random Forest which got 47% accuracy. I won't be rich with this tomorrow unfortunately. You can take a look at my project here: <a
+          >maxifoot.fr</a>. I applied my machine learning knowledge learned in class to predict the matches of the 2019-2020 season. I used classification algorithms to predict if a match ended in victory, defeat or draw. I tried Logistic regression, Support Vector Machines and Random Forest which got 47% accuracy. I will have to keep eating pasta this month. You can take a look at my project here: <a
             class="Colab"
             href="https://colab.research.google.com/drive/1YvNBcGHgS3TlJS2xwLu-JBRdB9X9usj6?usp=sharing"
             data-content="Colab"
@@ -143,8 +143,8 @@ p {
 }
 .text {
   position: relative;
-  background: #fff;
-  color: #111;
+  background: #111;
+  color: #fff;
   padding: 60px 180px 160px 60px;
   width: 775px;
   box-sizing: border-box;
@@ -248,7 +248,7 @@ a {
   }
 
   &:hover {
-    color: #111;
+    color: #fff;
     &:before {
       animation: glitchy 0.3s ease 0.3s infinite;
       opacity: 1;
@@ -290,7 +290,7 @@ a {
   }
 
   &:hover {
-    color: #111;
+    color: #fff;
     &:before {
       animation: glitchy 0.3s ease 0.3s infinite;
       opacity: 1;
@@ -332,7 +332,7 @@ a {
   }
 
   &:hover {
-    color: #111;
+    color: #fff;
     &:before {
       animation: glitchy 0.3s ease 0.3s infinite;
       opacity: 1;
