@@ -78,6 +78,11 @@ show(){
     document.addEventListener("mousemove", this.moveCursor);
      document.addEventListener('mouseleave', this.hide );
      document.addEventListener('mouseenter', this.show);
+
+     if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    {
+        document.body.style.cursor="default";
+    }
   }
 };
 
@@ -90,10 +95,11 @@ show(){
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  cursor: none;
+  
 }
 html {
   scroll-behavior: smooth;
+ 
 }
 ::selection {
   background-color: rgb(207, 74, 74);
@@ -132,6 +138,7 @@ html {
 body {
   overflow-y:overlay;
   overflow-x: hidden;
+  cursor: none;
   
 }
 ::-webkit-scrollbar {
@@ -185,7 +192,7 @@ body {
     user-select: none;
     border-radius: 100%;
     background: #dddddd;
-    z-index: 55555555;
+    z-index: 55;
     backface-visibility: hidden;
     will-change: transform;
   }
@@ -199,7 +206,7 @@ body {
     user-select: none;
     border-radius: 100%;
     background: #ff3838;
-    z-index: 55555555;
+    z-index: 55;
     backface-visibility: hidden;
     will-change: transform;
   }
