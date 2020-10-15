@@ -83,6 +83,10 @@ show(){
     {
         document.body.style.cursor="default";
     }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {
+        document.body.style.cursor="default";
+    }
   }
 };
 
