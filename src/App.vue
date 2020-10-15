@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]" id="cursor">
       <div
         :style="cursorCircle"
         class="g-cursor__circle"
@@ -43,13 +43,13 @@ export default {
   },
   computed: {
     cursorCircle() {
-      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
+      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0); opacity: 1;`
     },
     cursorPoint() {
-      return `transform: translateX(${this.xChild}px) translateY(${this.yChild}px) translateZ(0) translate3d(0, 0, 0);`
+      return `transform: translateX(${this.xChild}px) translateY(${this.yChild}px) translateZ(0) translate3d(0, 0, 0); opacity: 1;`
     },
     cursorPoint2() {
-      return `transform: translateX(${this.xGrandChild}px) translateY(${this.yGrandChild}px) translateZ(0) translate3d(0, 0, 0);`
+      return `transform: translateX(${this.xGrandChild}px) translateY(${this.yGrandChild}px) translateZ(0) translate3d(0, 0, 0); opacity: 1;`
     }
   },
   methods: {
@@ -68,25 +68,21 @@ export default {
     },
 hide(){
   this.hideCursor = true;
+  document.getElementById('cursor').style.opacity = 0
 },
 show(){
   this.hideCursor = false;
+   console.log("show")
+   document.getElementById('cursor').style.opacity = 1
 }
 
   },
   mounted() {
     document.addEventListener("mousemove", this.moveCursor);
-     document.addEventListener('mouseleave', this.hide );
-     document.addEventListener('mouseenter', this.show);
+    document.addEventListener("mouseleave", this.hide );
+    document.addEventListener("mouseenter", this.show);
 
-     if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-    {
-        document.body.style.cursor="default";
-    }
-    else if(navigator.userAgent.indexOf("Safari") != -1)
-    {
-        document.body.style.cursor="default";
-    }
+     
   }
 };
 
@@ -99,7 +95,7 @@ show(){
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  
+  cursor: none;
 }
 html {
   scroll-behavior: smooth;
@@ -142,7 +138,7 @@ html {
 body {
   overflow-y:overlay;
   overflow-x: hidden;
-  cursor: none;
+  
   
 }
 ::-webkit-scrollbar {
@@ -159,16 +155,7 @@ body {
 }
 
 .g-cursor {
-  &_hide {
-    opacity: 0;
-    position: fixed;
-    transition: opacity 0.6s ease;
-    width: 60px;
-    height: 60px;
-    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
-  }
- 
-
+  
   &__circle {
     pointer-events: none;
     user-select: none;
@@ -181,7 +168,7 @@ body {
     backdrop-filter: invert(1);
     opacity: 1;
     border-radius: 100%;
-    z-index: 5555;
+    z-index: 54;
     backface-visibility: hidden;
     transition: opacity 0.6s ease;
   }
@@ -222,6 +209,14 @@ body {
           opacity .6s ease;
       }
     }
+    &_hide {
+    z-index: 55;
+    position: fixed;
+    transition: opacity 0.6s ease;
+    width: 60px;
+    height: 60px;
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+  }
 
  
  

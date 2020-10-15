@@ -22,6 +22,7 @@ export default {
      methods: { 
            scrollTo(id) {
                 this.$emit('scrollTo',id);
+                document.getElementById('check').checked = false;
            }
         }
 }
@@ -54,7 +55,7 @@ export default {
   position: fixed;
   width: 100vw;
   height: 80px;
-  z-index: 2;
+  z-index: 3;
   background: linear-gradient( rgba(4, 5, 4, 0.7),rgba(4, 5, 4, 0.5),transparent);
 }
 .name {
@@ -115,7 +116,6 @@ a:hover {
   }
   ul {
     position: fixed;
-  
     width: 100%;
     height: 100vh;
     top: 80px;
@@ -141,7 +141,8 @@ a:hover {
 
   #check:checked ~ ul {
     left: 0;
-      background: #212529;
+    background: #212529ee;
+    
   }
 }
 @media (max-width: 380px) {
