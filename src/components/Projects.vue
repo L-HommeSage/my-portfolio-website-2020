@@ -156,7 +156,7 @@ p {
   right: 180px;
   width: 300px;
   height: 700px;
-  background-image: url("../assets/chats.png");
+  background-image: url("../assets/Chats.png");
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: cover;
@@ -172,7 +172,7 @@ p {
   border-radius: 8px;
   width: 200px;
   height: 400px;
-  background-image: url("../assets/kanpai1.jpg");
+  background-image: url("../assets/Kanpai1.jpg");
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: cover;
@@ -188,7 +188,7 @@ p {
   border-radius: 8px;
   width: 200px;
   height: 400px;
-  background-image: url("../assets/kanpai2.jpg");
+  background-image: url("../assets/Kanpai2.jpg");
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: cover;
@@ -204,7 +204,7 @@ p {
   border-radius: 8px;
   width: 200px;
   height: 400px;
-  background-image: url("../assets/kanpai3.jpg");
+  background-image: url("../assets/Kanpai3.jpg");
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: cover;
@@ -361,7 +361,7 @@ a {
     width: 130px;
     height: 500px;
     z-index: 2;
-    background-image: url("../assets/chats.png");
+    background-image: url("../assets/Chats.png");
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
@@ -380,7 +380,7 @@ a {
     border-radius: 8px;
     width: 180px;
     height: 380px;
-    background-image: url("../assets/kanpai2.jpg");
+    background-image: url("../assets/Kanpai2.jpg");
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;

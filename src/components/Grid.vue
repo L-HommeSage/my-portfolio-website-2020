@@ -9,7 +9,7 @@
           <div class="profil">
             <img
               class="profilpic"
-              src="../assets/profilepic.jpg"
+              src="../assets/Profilepic.jpg"
             />
             <p>As part of my studies as a software enginner at
               ECE Paris, I am looking for a 6-month internship from February
@@ -148,7 +148,7 @@ span{
 }
 
 .container .box:nth-child(4):hover {
-  background: url("../assets/city.png");
+  background: url("../assets/City.png");
 background-position: center;
   background-size: cover;
   opacity: 1;

@@ -112,37 +112,37 @@ export default {
   margin: 2px;
   list-style: none;
   position: relative;
-  background-image: url("../assets/bg.jpg");
+  background-image: url("../assets/Bg.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .instagram ul li:nth-child(1) {
-  background-image: url("../assets/geisha.png");
+  background-image: url("../assets/Geisha.png");
 }
 .instagram ul li:nth-child(2) {
-  background-image: url("../assets/tigre.png");
+  background-image: url("../assets/Tigre.png");
 }
 .instagram ul li:nth-child(3) {
-  background-image: url("../assets/mask.png");
+  background-image: url("../assets/Mask.png");
 }
 .instagram ul li:nth-child(4) {
-  background-image: url("../assets/suzette.png");
+  background-image: url("../assets/Suzette.png");
 }
 .instagram ul li:nth-child(5) {
-  background-image: url("../assets/look.png");
+  background-image: url("../assets/Look.png");
 }
 .instagram ul li:nth-child(6) {
-  background-image: url("../assets/enio.png");
+  background-image: url("../assets/Enio.png");
 }
 .instagram ul li:nth-child(7) {
-  background-image: url("../assets/lio.png");
+  background-image: url("../assets/Lio.png");
 }
 .instagram ul li:nth-child(8) {
-  background-image: url("../assets/chica.png");
+  background-image: url("../assets/Chica.png");
 }
 .instagram ul li:nth-child(9) {
-  background-image: url("../assets/samu.png");
+  background-image: url("../assets/Samu.png");
 }
 
 .instagram ul li:hover {
@@ -179,7 +179,7 @@ h2 {
   // transition: all 0.2s ease-in-out;
 }
 .bg {
-  background-image: url("../assets/bg.jpg");
+  background-image: url("../assets/Bg.jpg");
   background-position-x: 50%;
   background-position-y: 68.6%;
   animation: increase 40s linear 10ms infinite;
@@ -207,7 +207,7 @@ h2 {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  background-image: url("../assets/Koi.png");
+  background-image: url("../assets/Koi1.png");
   background-size: cover;
   text-align: center;
   display: flex;
@@ -231,7 +231,7 @@ h2 {
     left: 1.5%;
     list-style: none;
     position: relative;
-    background-image: url("../assets/bg.jpg");
+    background-image: url("../assets/Bg.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

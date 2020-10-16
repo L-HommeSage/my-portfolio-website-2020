@@ -65,7 +65,7 @@ header #picheader{
     height: 100%;
     width: 100vw;
     filter: brightness(1.15);
-    background: url('../assets/Kyotorouge.jpg');
+    background: url('../assets/KyotoRouge.jpg');
     background-size: cover;
     background-position-x: 50%;
   background-position-y: 50%;

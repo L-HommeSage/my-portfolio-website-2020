@@ -49,7 +49,7 @@
   width: 800px;
   height: 400px;
   border-radius: 8px;
-  background: url("../assets/paris.jpg");
+  background: url("../assets/Paris.jpg");
   background-position-y: 30%;
   background-size: cover;
   box-shadow: 0px 0px 61px -20px rgba(255, 255, 255, 0.7);
@@ -89,7 +89,7 @@
 }
 
 .container .clip.clip1 {
-  background: url("../assets/paris.jpg");
+  background: url("../assets/Paris.jpg");
   background-position-y: 30%;
   background-size: cover;
   border-radius: 8px;
@@ -97,7 +97,7 @@
 }
 
 .container .clip.clip2 {
-  background: url("../assets/camino.jpg");
+  background: url("../assets/Camino.jpg");
   background-position-y: 10%;
   background-size: cover;
   border-radius: 8px;
@@ -105,7 +105,7 @@
 }
 
 .container .clip.clip3 {
-  background: url("../assets/seoul.jpg");
+  background: url("../assets/Seoul.jpg");
   background-position-y: 30%;
   background-size: cover;
   border-radius: 8px;
