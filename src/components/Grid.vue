@@ -31,7 +31,7 @@
         data-aos="fade-up-left"
       >
         <div class="content">
-          <p><span> Professional experiences:</span><br /><br /> Software engeneer intern at Nekologic (LLC), Kyoto, Japan
+          <p><span> Professional experiences:</span><br /><br /> Software engineer intern at Nekologic (LLC), Kyoto, Japan
             <br /><small>April 2020 - September 2020</small><br /><br />
             Mobile development consultant at JEECE (junior enterprise of
             ECE), Paris, France<br />
