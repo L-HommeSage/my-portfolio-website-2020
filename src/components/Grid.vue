@@ -22,7 +22,7 @@
         data-aos="fade-up-left"
       >
         <div class="content">
-          <p><span>Ptogramming skills:</span> <br />HTML/CSS, Vue.js, Flutter, Python, C#/unity
+          <p><span>Programming skills:</span> <br />HTML/CSS, Vue.js, Flutter, Python, C#/unity
           </p>
         </div>
       </div>
@@ -31,9 +31,9 @@
         data-aos="fade-up-left"
       >
         <div class="content">
-          <p><span> Professional experiences:</span><br /><br /> Software ingeneer intern at Nekologic (LLC), Kyoto, Japan
+          <p><span> Professional experiences:</span><br /><br /> Software engeneer intern at Nekologic (LLC), Kyoto, Japan
             <br /><small>April 2020 - September 2020</small><br /><br />
-            Mobile development consultant at JEECE (junior company of
+            Mobile development consultant at JEECE (junior enterprise of
             ECE), Paris, France<br />
             <small>January 2020 - April 2020</small><br /><br />
             Web-marketing communication assistant at Speos Paris Photographic
